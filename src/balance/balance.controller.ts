@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Patch, Req, Version } from "@nestjs/common";
+import { Body, Controller, Get, Patch, Req, Version } from '@nestjs/common';
 import { UpdateBalanceDto } from './DTO/update-balance.dto';
 import { BalanceService } from './balance.service';
 import { Request } from 'express';
@@ -19,6 +19,9 @@ export class BalanceController {
     @Req() req: Request,
     @Body() updateBalanceDto: UpdateBalanceDto,
   ) {
-    return this.balanceService.updateBalance(req['user'].id, updateBalanceDto.amount);
+    return this.balanceService.updateBalance(
+      req['user'].id,
+      updateBalanceDto.amount,
+    );
   }
 }
