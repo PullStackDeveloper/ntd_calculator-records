@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Patch, Req, Version } from '@nestjs/common';
-import { UpdateBalanceDto } from './DTO/update-balance.dto';
+import { UpdateBalanceDto } from './dto/update-balance.dto';
 import { BalanceService } from './balance.service';
 import { Request } from 'express';
 

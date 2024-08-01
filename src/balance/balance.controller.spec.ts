@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { BalanceController } from './balance.controller';
 import { BalanceService } from './balance.service';
-import { UpdateBalanceDto } from './DTO/update-balance.dto';
+import { UpdateBalanceDto } from './dto/update-balance.dto';
 
 const mockBalanceService = {
   getBalance: jest.fn().mockResolvedValue({ id: 1, amount: 100, userId: 1 }),
