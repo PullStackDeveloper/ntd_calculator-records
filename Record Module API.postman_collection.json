@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "28f9c9cb-8c10-4164-bdf8-c5c0392341f1",
+		"name": "Record Module API",
+		"description": "Collection for Record Module API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14680153",
+		"_collection_link": "https://guayoyo.postman.co/workspace/Chat-GPT~95d7c19b-43d8-4c79-ae4b-6b2b3d30efed/collection/14680153-28f9c9cb-8c10-4164-bdf8-c5c0392341f1?action=share&source=collection_link&creator=14680153"
+	},
+	"item": [
+		{
+			"name": "Create Record",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkZlcm5hbmRvIiwic3ViIjoxLCJpYXQiOjE3MjIyNDc1ODAsImV4cCI6MTcyMjI1MTE4MH0.-_nbU28nhy0QPW9OwitkjtNrdUIdvPyR4z0tI37i_XY"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"operationType\": \"addition\",\n  \"amount\": 100.00,\n  \"userBalance\": 900.00,\n  \"operationResponse\": \"100\",\n  \"userId\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/records",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"records"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Record by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIwMSIsInN1YiI6MSwiaWF0IjoxNzIyNTMzMDEwLCJleHAiOjE3MjI1MzM2MTB9.XRGzrCSiIc7-j_jGfeWTRkzMO8UIda3_zHI691gZfjY"
+					}
+				],
+				"url": {
+					"raw": "http://lolcahost:5000/api/v1/records/",
+					"protocol": "http",
+					"host": [
+						"lolcahost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"records",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Records with Pagination",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkZlcm5hbmRvIiwic3ViIjoxLCJpYXQiOjE3MjIyNDc1ODAsImV4cCI6MTcyMjI1MTE4MH0.-_nbU28nhy0QPW9OwitkjtNrdUIdvPyR4z0tI37i_XY"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/records?page=1&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"records"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Record by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/records/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"records",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

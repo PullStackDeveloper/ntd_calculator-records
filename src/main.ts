@@ -14,7 +14,7 @@ async function bootstrap() {
     type: VersioningType.URI,
   });
   app.enableCors({
-    origin: '*',
+    origin: ['*'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true,
   });
